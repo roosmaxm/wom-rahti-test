@@ -3,12 +3,14 @@ const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT || 8080
 
+const FOO = process.env.FOO || "Foo not found in env"
+
 console.log(`Node.js ${process.version}`)
 
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.json({ msg: "Rahti2 node 0.2" })
+    res.json({ msg: "Rahti2 node 0.3" })
 })
 
 
